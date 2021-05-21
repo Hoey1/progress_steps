@@ -39,10 +39,13 @@ function update() {
   progress.style.width =
     ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
 
+  // if current active equals 1, prev button is disabled
   if (currentActive === 1) {
     prev.disabled = true;
+    // if cuurentActive === total length (4) the next button is disabled
   } else if (currentActive === circles.length) {
     next.disabled = true;
+    // If currentActive does not equal 1 or 4 then both buttons will be active/not disabled (False)
   } else {
     prev.disabled = false;
     next.disabled = false;
